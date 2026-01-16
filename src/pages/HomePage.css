@@ -1,0 +1,252 @@
+/* Hero Section Styling */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./images/interior-design-neoclassical-style-with-furnishings-decor.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* Hero Content */
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Typing Text Styling */
+.typing-text {
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  animation: typing 4s steps(50) 1s 1 normal both, blink 0.75s step-end infinite;
+  margin-left: 250px;
+}
+
+
+
+/* Hero Buttons Styling */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-button {
+  background-color: rgba(255, 255, 255, 0.434);
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: rgba(255, 235, 235, 0.546);
+}
+/* Testimonials Section */
+.testimonials-section {
+  padding: 50px 20px;
+  background-color: #efd0ce2b;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #dd98a8;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+.client-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color:#dd98a8;
+}
+
+.client-title {
+  font-size: 0.9em;
+  color: #9b6b76;
+  margin-bottom: 15px;
+}
+
+.client-review {
+  font-size: 0.9em;
+  color: #9b6b76;
+  line-height: 1.5;
+}
+
+.client-review a {
+  color: #dd98a8;
+  text-decoration: none;
+}
+
+.client-review a:hover {
+  text-decoration: underline;
+}
+
+/* About Section */
+.about-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 1100px;
+  margin: 20px auto;
+  color: #9b6b76;
+  font-size: larger;
+}
+.about-section h2 {
+  color:#dd98a8;
+  font-size:xx-large;
+}
+
+.about-links {
+  margin-top: 20px;
+}
+
+.about-button {
+  background-color: #e5bac3;
+  color: white;
+  font-size: medium;
+  padding: 15px 30px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+  border: 5cap;
+}
+
+.about-button:hover {
+  background-color: #f7c7d1;
+}
+
+/* Hire Us Section */
+.hire-us-section {
+  position: relative;
+  background: url('./images/image.png') no-repeat center center;
+  background-color: #ffffff;
+  background-size: contain; 
+  background-position: left; 
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.hire-us-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.hire-us-content {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.hire-us-content h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #dd98a8;
+  margin-bottom: 500px;
+}
+
+.hire-us-content p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.hire-us-form-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hire-us-form {
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 8, 8, 0.2); 
+  width: 90%;
+  max-width: 600px;
+}
+
+.hire-us-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.hire-us-form input,
+.hire-us-form textarea {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.hire-us-form button.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e5bac3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hire-us-form button.submit-button:hover {
+  background-color: #f7c7d1;
+}

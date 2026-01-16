@@ -1,0 +1,150 @@
+.navbar2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar2.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar2.visible {
+  transform: translateY(0);
+}
+
+.logo2 a {
+  text-decoration: none;
+  color: #cb5671;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.logo2 a:hover {
+  color: #ad5064;
+}
+
+.nav-links2 {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  margin-right: 3rem;
+}
+
+.nav-links2 a {
+  text-decoration: none;
+  color: #cb5671;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links2 a:hover {
+  color: #ad5064;
+}
+
+.dropdown2 {
+  position: relative;
+}
+
+.dropdown-menu2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0.5rem 0;
+  display: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown2.active .dropdown-menu2 {
+  display: block;
+}
+
+.dropdown-menu2 li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu2 li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.dropdown-menu2 li a:hover {
+  background-color: #f5f5f5;
+}
+
+.nav-toggle2 {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #cb5671;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links2 {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(210, 166, 177, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 4rem;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links2.active {
+    display: flex;
+  }
+
+  .nav-links2 a {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: #926772;
+  }
+
+  .dropdown-menu2 {
+    display: none;
+    position: static;
+    width: 100%;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+  }
+
+  .dropdown2.active .dropdown-menu2 {
+    display: block;
+  }
+
+  .nav-toggle2 {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-toggle2 {
+    display: none;
+  }
+}

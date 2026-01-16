@@ -1,0 +1,87 @@
+.hire-us-section {
+    position: relative;
+    background: url('./images/image.png') no-repeat center center;
+    background-size: contain;
+    background-position: left; 
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.hire-us-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.hire-us-content {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.hire-us-content h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #dd98a8;
+    margin-bottom: 500px;
+}
+
+.hire-us-content p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hire-us-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hire-us-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+}
+
+.hire-us-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hire-us-form input,
+.hire-us-form textarea {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.hire-us-form button.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e5bac3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hire-us-form button.submit-button:hover {
+    background-color: #f7c7d1;
+}

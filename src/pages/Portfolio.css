@@ -1,0 +1,18 @@
+.portfolio-container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.portfolio-container h2 {
+  font-family: "Arial, sans-serif";
+  font-size: 2rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .portfolio-container h2 {
+    font-size: 1.5rem; 
+  }
+}
