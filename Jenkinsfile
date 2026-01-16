@@ -1,25 +1,21 @@
 pipeline {
-    agent any
-
-    environment {
-        TERRAFORM_DIR = "terraform" // Path to your Terraform files
+    agent {
+        docker {
+            image 'hashicorp/terraform:1.7.6' // official Terraform image
+            args '-u root:root' // optional, run as root
+        }
     }
 
-    options {
-        disableConcurrentBuilds() // Prevent multiple builds at the same time
-        buildDiscarder(logRotator(numToKeepStr: '10')) // Keep last 10 build logs
+    environment {
+        TERRAFORM_DIR = "terraform"
     }
 
     stages {
-
         stage('Terraform Security Scan') {
             steps {
                 script {
-                    echo "Installing Trivy for Terraform security scan..."
                     sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh'
-
-                    echo "Scanning Terraform files in ${TERRAFORM_DIR}..."
-                    sh "trivy config ${TERRAFORM_DIR} --exit-code 1 || true"
+                    sh "./bin/trivy config ${TERRAFORM_DIR} --exit-code 1 || true"
                 }
             }
         }
@@ -27,10 +23,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 dir("${TERRAFORM_DIR}") {
-                    echo "Initializing Terraform..."
                     sh 'terraform init'
-
-                    echo "Generating Terraform plan..."
                     sh 'terraform plan'
                 }
             }
