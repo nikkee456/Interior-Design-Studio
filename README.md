@@ -61,9 +61,10 @@ Clean Trivy security scan output
 Application running on AWS public IP
 
 ✅ All screenshots and build outputs required for submission have been added to the screenshots folder.
+
 ---
 
-🤖 AI Usage Log 
+## 🤖 AI Usage Log 
 🔹 Exact AI Prompt Used
 Analyze this Terraform configuration and identify security vulnerabilities.
 Suggest best-practice remediations to make the infrastructure compliant with AWS security standards.
