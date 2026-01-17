@@ -11,13 +11,14 @@ pipeline {
             agent {
                 docker {
                     image 'aquasec/trivy:latest'
-                    args '-u root:root'
+                    args "--entrypoint='' -u root:root"
                 }
             }
             steps {
-                sh """
+                sh '''
+                  trivy version
                   trivy config ${TERRAFORM_DIR} --exit-code 0
-                """
+                '''
             }
         }
 
