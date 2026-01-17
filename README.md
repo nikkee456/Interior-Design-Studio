@@ -42,10 +42,10 @@ Deployment Type: Public EC2 Instance
 
 ## 🔐 Security Implementation
 
-Terraform misconfiguration scanning using Trivy
-Security group egress restricted
-Pipeline configured to fail on HIGH/CRITICAL issues
-Final scan shows zero vulnerabilities
+- Terraform misconfiguration scanning using Trivy
+- Security group egress restricted
+- Pipeline configured to fail on HIGH/CRITICAL issues
+- Final scan shows zero vulnerabilities
 ---
 
 ## 📊 Before & After Security Report
