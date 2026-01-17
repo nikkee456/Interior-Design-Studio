@@ -66,6 +66,7 @@ Application running on AWS public IP
 
 ## 🤖 AI Usage Log 
 🔹 Exact AI Prompt Used
+
 Analyze this Terraform configuration and identify security vulnerabilities.
 Suggest best-practice remediations to make the infrastructure compliant with AWS security standards.
 
