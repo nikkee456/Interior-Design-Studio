@@ -19,7 +19,7 @@ An intentionally vulnerable Terraform configuration was used to validate the sec
 
 ---
 
-##☁️ Cloud Provider
+## ☁️ Cloud Provider
 
 Cloud Platform: Amazon Web Services (AWS)
 Service Used: EC2 (Elastic Compute Cloud)
@@ -40,7 +40,7 @@ Deployment Type: Public EC2 Instance
 
 ---
 
-##🔐 Security Implementation
+## 🔐 Security Implementation
 
 Terraform misconfiguration scanning using Trivy
 Security group egress restricted
