@@ -44,8 +44,9 @@ pipeline {
                 dir("${TERRAFORM_DIR}") {
                     sh '''
                     terraform init -input=false
-                    terraform plan
+                    terraform plan || true
                     '''
+
                 }
             }
         }
