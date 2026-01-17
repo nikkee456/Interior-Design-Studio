@@ -7,11 +7,11 @@ pipeline {
 
     stages {
 
-        stage('Terraform Security Scan') {
+        stage('Terraform Security Scan (Trivy)') {
             agent {
                 docker {
                     image 'aquasec/trivy:latest'
-                    args "--entrypoint='' -u root:root"
+                    args "--entrypoint=''"
                 }
             }
             steps {
@@ -26,16 +26,13 @@ pipeline {
             agent {
                 docker {
                     image 'hashicorp/terraform:1.7'
-                    args '-u root:root'
+                    args "--entrypoint=''"
                 }
             }
             steps {
                 dir("${TERRAFORM_DIR}") {
-                    sh '''
-                      terraform version
-                      terraform init
-                      terraform plan
-                    '''
+                    sh 'terraform init -input=false'
+                    sh 'terraform plan'
                 }
             }
         }
