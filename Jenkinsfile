@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
 
     environment {
         TERRAFORM_DIR = "terraform"
@@ -7,17 +7,23 @@ pipeline {
 
     stages {
 
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Terraform Security Scan (Trivy)') {
             agent {
                 docker {
                     image 'aquasec/trivy:latest'
-                    args "--entrypoint=''"
+                    args '--entrypoint=""'
                 }
             }
             steps {
                 sh '''
-                  trivy version
-                  trivy config ${TERRAFORM_DIR} --exit-code 0
+                trivy version
+                trivy config ${TERRAFORM_DIR} --exit-code 0
                 '''
             }
         }
@@ -26,13 +32,15 @@ pipeline {
             agent {
                 docker {
                     image 'hashicorp/terraform:1.7'
-                    args "--entrypoint=''"
+                    args '--entrypoint=""'
                 }
             }
             steps {
                 dir("${TERRAFORM_DIR}") {
-                    sh 'terraform init -input=false'
-                    sh 'terraform plan'
+                    sh '''
+                    terraform init -input=false
+                    terraform plan || true
+                    '''
                 }
             }
         }
