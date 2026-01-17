@@ -22,8 +22,13 @@ pipeline {
             }
             steps {
                 sh '''
+                echo "Running Trivy Terraform security scan..."
                 trivy version
-                trivy config ${TERRAFORM_DIR} --exit-code 0
+
+                # Fail pipeline on CRITICAL or HIGH findings
+                trivy config ${TERRAFORM_DIR} \
+                  --severity CRITICAL,HIGH \
+                  --exit-code 1
                 '''
             }
         }
@@ -39,7 +44,7 @@ pipeline {
                 dir("${TERRAFORM_DIR}") {
                     sh '''
                     terraform init -input=false
-                    terraform plan || true
+                    terraform plan
                     '''
                 }
             }
@@ -47,6 +52,12 @@ pipeline {
     }
 
     post {
+        success {
+            echo "Pipeline completed successfully with no CRITICAL/HIGH vulnerabilities."
+        }
+        failure {
+            echo "Pipeline failed due to security vulnerabilities."
+        }
         always {
             echo "Pipeline finished!"
         }
