@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'hashicorp/terraform:1.7.6' // official Terraform image
+            image 'hashicorp/terraform:1.7' // official Terraform image
             args '-u root:root' // optional, run as root
         }
     }
