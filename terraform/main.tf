@@ -9,7 +9,7 @@ resource "aws_security_group" "web_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["127.0.0.1/32"]  # Replace with your public IP if needed
+    cidr_blocks = ["127.0.0.1/32"]  
   }
 
   ingress {
