@@ -91,4 +91,4 @@ Trivy security scan (fail → pass)
 Terraform deployment
 Application running on AWS public IP
 
-🎥 Video Link: xyz
+🎥 Video Link: https://drive.google.com/file/d/1Z3EJeeR1d62C8HsogEcIgP7_u7Nu4HQd/view
